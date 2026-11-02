@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Giai Điệu Giáng Sinh 🎄</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="lights"></div>
+<header class="fur">
+  <h1>🎅 Giai Điệu Giáng Sinh</h1>
+  <button id="loginBtn" class="gold">🔑 Đăng nhập admin</button>
+  <span class="hang" style="left:30%">🧦</span>
+  <span class="hang" style="left:52%;animation-delay:-1s">🔔</span>
+  <span class="hang" style="left:70%;animation-delay:-2s">🍭</span>
+</header>
+
+<main>
+  <section class="coat player">
+    <div class="inner">
+      <span class="orn" style="top:6px;right:16px">🍬</span>
+      <div class="stage">
+        <span class="hat">🎅</span>
+        <div class="arm"></div>
+        <div class="disc" id="disc"><div class="label"></div></div>
+      </div>
+      <h2 id="title">Chọn một bài hát</h2>
+      <p id="artist">&nbsp;</p>
+      <div class="time">
+        <span id="cur">0:00</span>
+        <input type="range" id="seek" min="0" max="1000" value="0" aria-label="Tua bài hát">
+        <span id="dur">0:00</span>
+      </div>
+      <div class="ctrl">
+        <button id="loop" title="Lặp lại bài này" aria-label="Lặp lại bài này">🔂</button>
+        <button id="prev" title="Bài trước" aria-label="Bài trước">⏮</button>
+        <button id="play" class="big" title="Phát / Tạm dừng" aria-label="Phát hoặc tạm dừng">▶</button>
+        <button id="next" title="Bài tiếp" aria-label="Bài tiếp">⏭</button>
+        <input type="range" id="vol" min="0" max="1" step="0.01" value="0.8" aria-label="Âm lượng">
+      </div>
+    </div>
+    <div class="belt"><i class="buckle"></i></div>
+  </section>
+
+  <section class="coat side">
+    <div class="inner">
+      <span class="orn" style="top:4px;right:18px">🧦</span>
+      <h3>🎁 Danh sách nhạc</h3>
+      <ul id="list"></ul>
+      <form id="addForm" class="admin-only">
+        <h3>➕ Thêm bài hát mới</h3>
+        <input id="newTitle" placeholder="Tên bài hát" maxlength="80">
+        <input id="newArtist" placeholder="Ca sĩ / Nghệ sĩ" maxlength="80">
+        <input id="newFile" type="file" accept="audio/*,.mp3,.wav,.ogg,.m4a" required>
+        <button class="gold" type="submit">Thêm vào danh sách</button>
+      </form>
+    </div>
+    <div class="belt"><i class="buckle"></i></div>
+  </section>
+</main>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3fae62"/><stop offset=".55" stop-color="#1c7a3d"/><stop offset="1" stop-color="#0b4020"/></linearGradient>
+<linearGradient id="hl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d6ffd9" stop-opacity=".3"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#001a08" stop-opacity=".42"/></linearGradient>
+<radialGradient id="red" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#fff"/><stop offset=".22" stop-color="#ff5a4a"/><stop offset="1" stop-color="#8e0f0a"/></radialGradient>
+<radialGradient id="gld" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#fff"/><stop offset=".22" stop-color="#ffe38a"/><stop offset="1" stop-color="#b97a0c"/></radialGradient>
+<radialGradient id="blu" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#fff"/><stop offset=".22" stop-color="#bfe3ff"/><stop offset="1" stop-color="#3a6ea5"/></radialGradient>
+<radialGradient id="glow"><stop offset="0" stop-color="#ffe9a0"/><stop offset="1" stop-color="#ffe9a0" stop-opacity="0"/></radialGradient>
+<filter id="fuzz" x="-6%" y="-6%" width="112%" height="112%"><feTurbulence type="fractalNoise" baseFrequency=".55" numOctaves="2" seed="3" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/><feGaussianBlur stdDeviation=".45"/></filter>
+<path id="t1" d="M100 22C86 44 68 72 46 112Q60 120 72 112Q86 124 100 114Q114 124 128 112Q140 120 154 112C132 72 114 44 100 22Z"/>
+<path id="t2" d="M100 70C78 92 55 122 28 168Q44 176 58 168Q74 182 90 172Q100 180 110 172Q126 182 142 168Q156 176 172 168C145 122 122 92 100 70Z"/>
+<path id="t3" d="M100 120C70 140 40 175 12 222Q30 232 48 224Q62 240 80 228Q100 242 120 228Q138 240 152 224Q170 232 188 222C160 175 130 140 100 120Z"/>
+<g id="tree">
+<ellipse cx="100" cy="258" rx="58" ry="6" fill="#000" opacity=".28"/>
+<rect x="90" y="224" width="20" height="34" rx="3" fill="#5e341a"/>
+<g filter="url(#fuzz)">
+<use href="#t3" fill="url(#g)"/><use href="#t3" fill="url(#hl)"/>
+<use href="#t2" fill="url(#g)"/><use href="#t2" fill="url(#hl)"/>
+<use href="#t1" fill="url(#g)"/><use href="#t1" fill="url(#hl)"/>
+<g fill="#fff" opacity=".92"><ellipse cx="16" cy="222" rx="8" ry="3.5"/><ellipse cx="184" cy="222" rx="8" ry="3.5"/><ellipse cx="32" cy="168" rx="7" ry="3"/><ellipse cx="168" cy="168" rx="7" ry="3"/><ellipse cx="50" cy="112" rx="6" ry="3"/><ellipse cx="150" cy="112" rx="6" ry="3"/><ellipse cx="100" cy="26" rx="5" ry="3"/></g>
+</g>
+<g fill="none" stroke="#f7c948" stroke-width="3" stroke-linecap="round" stroke-dasharray=".1 6"><path d="M58 100Q100 124 142 100"/><path d="M44 150Q100 180 156 150"/><path d="M26 202Q100 236 174 202"/></g>
+<g fill="#ffd23f" stroke="#ffd23f" stroke-opacity=".35" stroke-width="5"><circle cx="72" cy="106" r="2.4"/><circle cx="128" cy="104" r="2.4"/><circle cx="58" cy="160" r="2.4"/><circle cx="142" cy="158" r="2.4"/><circle cx="46" cy="212" r="2.4"/><circle cx="154" cy="210" r="2.4"/><animate attributeName="opacity" values="1;.25;1" dur="1.6s" repeatCount="indefinite"/></g>
+<g fill="#ff9a8a" stroke="#ff9a8a" stroke-opacity=".35" stroke-width="5"><circle cx="100" cy="124" r="2.4"/><circle cx="88" cy="176" r="2.4"/><circle cx="114" cy="178" r="2.4"/><circle cx="72" cy="224" r="2.4"/><circle cx="128" cy="226" r="2.4"/><animate attributeName="opacity" values="1;.25;1" dur="1.6s" begin=".8s" repeatCount="indefinite"/></g>
+<g><circle cx="88" cy="92" r="5" fill="url(#red)"/><circle cx="118" cy="150" r="5" fill="url(#red)"/><circle cx="66" cy="196" r="5" fill="url(#red)"/><circle cx="132" cy="214" r="5" fill="url(#red)"/>
+<circle cx="112" cy="72" r="4.5" fill="url(#gld)"/><circle cx="78" cy="148" r="5" fill="url(#gld)"/><circle cx="150" cy="194" r="5" fill="url(#gld)"/><circle cx="96" cy="206" r="4.5" fill="url(#gld)"/>
+<circle cx="100" cy="48" r="4.5" fill="url(#blu)"/><circle cx="62" cy="128" r="4.5" fill="url(#blu)"/><circle cx="136" cy="132" r="4.5" fill="url(#blu)"/><circle cx="40" cy="206" r="4.5" fill="url(#blu)"/></g>
+<circle cx="100" cy="17" r="20" fill="url(#glow)" opacity=".75"/>
+<path d="M100 6L102.7 13.3L110.5 13.6L104.4 18.4L106.5 25.9L100 21.6L93.5 25.9L95.6 18.4L89.5 13.6L97.3 13.3Z" fill="#ffd23f" stroke="#e0a21a" stroke-width=".6" stroke-linejoin="round"/>
+</g></defs></svg>
+<svg class="tree" style="left:2%" viewBox="0 0 200 262"><use href="#tree"/></svg>
+<svg class="tree" style="right:2%" viewBox="0 0 200 262"><use href="#tree"/></svg>
+
+<footer>🎁 🍬 🧦 Chúc mừng Giáng Sinh – Merry Christmas! 🧦 🍬 🎁</footer>
+
+<dialog id="dlg">
+  <form id="loginForm">
+    <h3>🎅 Đăng nhập admin</h3>
+    <input id="user" placeholder="Tài khoản" autocomplete="username" required>
+    <input id="pass" type="password" placeholder="Mật khẩu" autocomplete="current-password" required>
+    <div class="row">
+      <button class="gold" type="submit">Đăng nhập</button>
+      <button type="button" id="cancel" class="plain">Hủy</button>
+    </div>
+  </form>
+</dialog>
+
+<div id="toast" role="status"></div>
+<audio id="audio" preload="metadata"></audio>
+<script src="js/app.js"></script>
+</body>
+</html>
