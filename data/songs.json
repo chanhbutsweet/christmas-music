@@ -1,8 +1,44 @@
 [
   {
-    "id": "s2",
-    "title": "We Wish You a Merry Christmas",
-    "artist": "Nhạc dân gian (bản synth mẫu)",
-    "file": "songs/we-wish-you.mp3"
+    "id": "mvyqwbks",
+    "title": "All I Want for Christmas Is You",
+    "artist": "Mariah Carey",
+    "file": "songs/mvyqwbks.mp3"
+  },
+  {
+    "id": "mvyqwrdn",
+    "title": "Last Christmas",
+    "artist": "Wham!",
+    "file": "songs/mvyqwrdn.mp3"
+  },
+  {
+    "id": "mvyqx4u2",
+    "title": "Snowman",
+    "artist": "Sia",
+    "file": "songs/mvyqx4u2.mp3"
+  },
+  {
+    "id": "mvyqxk70",
+    "title": "Chẳng Giống Giáng Sinh",
+    "artist": "Lu",
+    "file": "songs/mvyqxk70.mp3"
+  },
+  {
+    "id": "mvyr3acr",
+    "title": "Jingle Bells Rock",
+    "artist": "Bobby Helms",
+    "file": "songs/mvyr3acr.mp3"
+  },
+  {
+    "id": "mvyr53a6",
+    "title": "Feliz Navidad",
+    "artist": "José Feliciano",
+    "file": "songs/mvyr53a6.mp3"
+  },
+  {
+    "id": "mvyrgchb",
+    "title": "Santa Tell Me",
+    "artist": "Ariana Grande",
+    "file": "songs/mvyrgchb.mp3"
   }
 ]

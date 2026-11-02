@@ -28,6 +28,7 @@ async function loadSongs(keepId) {
 }
 
 function renderList() {
+  $('#count').textContent = songs.length ? `(${songs.length} bài)` : '';
   $('#list').innerHTML = songs.map((s, i) => `
     <li class="${i === cur ? 'on' : ''}" data-i="${i}">
       <span>${i === cur && !audio.paused ? '🎵' : i + 1}</span>
